@@ -1,3 +1,8 @@
+---
+output:
+  pdf_document: default
+  html_document: default
+---
 Version: 1.0
 
 RestoreWorkspace: Default
@@ -11,3 +16,9 @@ Encoding: UTF-8
 
 RnwWeave: Sweave
 LaTeX: pdfLaTeX
+
+# Now we are going to establish some variables. 
+f = 3
+g = 5
+print("f + g equals", f+g)
+
