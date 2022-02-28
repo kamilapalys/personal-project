@@ -3,22 +3,21 @@ output:
   pdf_document: default
   html_document: default
 ---
-Version: 1.0
+```{r}
+Sys.setenv("VROOM_CONNECTION_SIZE" = 131072 * 2)
 
-RestoreWorkspace: Default
-SaveWorkspace: Default
-AlwaysSaveHistory: Default
+```
 
-EnableCodeIndexing: Yes
-UseSpacesForTab: Yes
-NumSpacesForTab: 2
-Encoding: UTF-8
 
-RnwWeave: Sweave
-LaTeX: pdfLaTeX
+```{r}
+devtools::install_github("abresler/nbastatR")
+library(nbastatR)
 
-# Now we are going to establish some variables. 
-f = 3
-g = 5
-print("f + g equals", f+g)
+```
+
+```{r}
+nbastatR %>%
+  select(players)
+
+```
 
